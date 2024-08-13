@@ -15,5 +15,22 @@ int main()
     {
         cout << "음수가 아닌 수로 리스트의 크기 입력 : ";
         cin >> size;
-    } while (size < 0);
+    } while (size <= 0);
+
+    for (int i = 1; i <= size; i++)
+    {
+        cout << "다음 숫자 입력 : ";
+        cin >> number;
+        if (number < smallest)
+        {
+            smallest = number;
+        }
+        if (number > largest)
+        {
+            largest = number;
+        }
+    }
+    cout << "최솟값 : " << smallest << endl;
+    cout << "최댓값 : " << largest << endl;
+    return 0;
 }
